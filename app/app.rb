@@ -25,11 +25,12 @@ class Picty < Padrino::Application
   #   end
   #
 
-  ##
-  # You can manage errors like:
-  #
-  #   error 404 do
-  #     render 'errors/404'
-  #   end
-  #
+  get "/" do
+    "Hello World !"
+  end
+
+  # Error 404 Handler
+  error 404 do
+    render :haml, "%p 404, File not Found"
+  end
 end
