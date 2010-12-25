@@ -15,6 +15,8 @@ class Picty < Padrino::Application
   # disable :flash              # Disables rack-flash (enabled by default if sessions)
   # layout  :my_layout          # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
   #
+  
+  layout :application
 
   ##
   # You can configure for a specified environment like:
