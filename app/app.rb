@@ -27,12 +27,8 @@ class Picty < Padrino::Application
   #   end
   #
 
-  get "/" do
-    "Hello World !"
-  end
-
   # Error 404 Handler
   error 404 do
-    render :haml, "%p 404, File not Found"
+    render :haml, "%p 404 : File not Found"
   end
 end
