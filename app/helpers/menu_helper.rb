@@ -6,6 +6,10 @@ Picty.helpers do
     Directory.get_directory('/').children.each do |child|
       dir << { :name => child.name, :path => child.path, :nb_images => child.number_of_images }
     end
-    partial 'menu/submenu', :object => dir
+    if dir.length == 0
+      render :haml, '%p No images', :layout => false
+    else
+      partial 'menu/submenu', :object => dir
+    end
   end
 end
