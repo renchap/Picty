@@ -19,3 +19,6 @@ div#menu {
 div#main {
   display: block;
   margin-left: 265px; }
+
+img.thumb {
+  width: 180px; }

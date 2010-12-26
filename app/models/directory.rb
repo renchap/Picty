@@ -42,8 +42,8 @@ class Directory
   def images
     Dir.entries(self.physical_path).reject do |entry|
       next true if entry =~ /^\./
-      next true unless File.file?(entry)
-      entry =~ /\.jpg$/i
+      next true unless File.file?(self.physical_path+'/'+entry)
+      not entry =~ /\.jpg$/i
     end
   end
   
