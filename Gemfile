@@ -5,6 +5,8 @@ gem 'rake'
 gem 'rack-flash'
 gem 'thin' # or mongrel
 
+gem 'json'
+
 # Component requirements
 gem 'haml'
 

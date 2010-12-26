@@ -2,6 +2,10 @@
 
 Picty.helpers do
   def display_menu
-    "Menu..."
+    dir = Array.new
+    Directory.get_directory('/').children.each do |child|
+      dir << { :name => child.name, :path => child.path, :nb_images => child.number_of_images }
+    end
+    partial 'menu/submenu', :object => dir
   end
 end
