@@ -17,6 +17,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mini_magick (3.1)
+      subexec (~> 0.0.4)
     padrino (0.9.19)
       padrino-admin (= 0.9.19)
       padrino-core (= 0.9.19)
@@ -50,6 +52,7 @@ GEM
     sinatra (1.1.0)
       rack (~> 1.1)
       tilt (~> 1.2)
+    subexec (0.0.4)
     thin (1.2.7)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -68,6 +71,7 @@ PLATFORMS
 DEPENDENCIES
   haml
   json
+  mini_magick
   padrino (= 0.9.19)
   rack-flash
   rake

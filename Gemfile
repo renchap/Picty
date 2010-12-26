@@ -6,6 +6,7 @@ gem 'rack-flash'
 gem 'thin' # or mongrel
 
 gem 'json'
+gem 'mini_magick'
 
 # Component requirements
 gem 'haml'
