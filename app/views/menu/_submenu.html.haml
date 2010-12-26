@@ -2,6 +2,6 @@
   - submenu.each do |o|
     %li{:id => 'submenu_'+o[:path]}
       = link_to o[:name], "/albums#{o[:path]}"
-      - if o[:nb_images] > 0
-        = " (#{o[:nb_images]})"
+      - if o[:nb_pictures] > 0
+        = " (#{o[:nb_pictures]})"
       = display_menu o[:path]

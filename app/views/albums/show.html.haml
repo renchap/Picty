@@ -1,2 +1,2 @@
-- @images.each do |image|
-  = image_tag "/pictures/#{@path}/#{image}", :class => 'thumb'
+- @pictures.each do |picture|
+  = image_tag picture.thumbnail.url, :class => 'thumb'

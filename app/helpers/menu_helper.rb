@@ -4,7 +4,7 @@ Picty.helpers do
   def display_menu path = '/'
     dir = Array.new
     Directory.get_directory(path).children.each do |child|
-      dir << { :name => child.name, :path => child.path, :nb_images => child.number_of_images }
+      dir << { :name => child.name, :path => child.path, :nb_pictures => child.number_of_pictures }
     end
     if dir.length == 0 and path == '/'
       render :haml, '%p No Albums', :layout => false

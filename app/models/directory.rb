@@ -39,15 +39,17 @@ class Directory
     Directory.get_directory '/'+a.join('/')
   end
   
-  def images
+  def pictures
     Dir.entries(self.physical_path).reject do |entry|
       next true if entry =~ /^\./
       next true unless File.file?(self.physical_path+'/'+entry)
       not entry =~ /\.jpg$/i
+    end.map do |picture|
+      Picture.new("#{self.path}/#{picture}")
     end
   end
   
-  def number_of_images
-    self.images.length
+  def number_of_pictures
+    self.pictures.length
   end
 end
