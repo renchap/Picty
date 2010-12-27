@@ -7,6 +7,7 @@ gem 'thin' # or mongrel
 
 gem 'json'
 gem 'mini_magick'
+gem 'naturalsort'
 
 # Component requirements
 gem 'haml'

@@ -19,6 +19,7 @@ GEM
     mime-types (1.16)
     mini_magick (3.1)
       subexec (~> 0.0.4)
+    naturalsort (1.1.1)
     padrino (0.9.19)
       padrino-admin (= 0.9.19)
       padrino-core (= 0.9.19)
@@ -72,6 +73,7 @@ DEPENDENCIES
   haml
   json
   mini_magick
+  naturalsort
   padrino (= 0.9.19)
   rack-flash
   rake
