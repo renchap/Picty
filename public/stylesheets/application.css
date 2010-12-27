@@ -13,12 +13,40 @@ div#menu {
   overflow-x: hidden;
   margin: 0;
   padding: 5px;
+  top: 0px;
   background: black;
-  border-right: solid white 1px; }
+  border-right: solid white 1px;
+  font-size: 14pt; }
+  div#menu ul {
+    list-style-type: none; }
+  div#menu li {
+    list-style: none; }
+    div#menu li span.count {
+      float: right;
+      margin-right: 5px;
+      font-size: 12pt; }
+  div#menu a:link, div#menu a:visited {
+    text-decoration: none;
+    font-style: none;
+    color: white; }
+  div#menu a:hover, div#menu a:active {
+    text-decoration: underline; }
 
 div#main {
   display: block;
   margin-left: 265px; }
 
-img.thumb {
-  width: 180px; }
+ul.image_list {
+  list-style: none; }
+
+.image_list li {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  text-align: center; }
+
+.thumb img {
+  border: 1px solid white;
+  -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  align: center; }

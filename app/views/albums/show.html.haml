@@ -1,2 +1,4 @@
-- @pictures.each do |picture|
-  = image_tag picture.thumbnail.url, :class => 'thumb'
+%ul.image_list
+  - @pictures.each do |picture|
+    %li.thumb
+      = image_tag picture.thumbnail.url

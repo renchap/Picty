@@ -3,5 +3,5 @@
     %li{:id => 'submenu_'+o[:path]}
       = link_to o[:name], "/albums#{o[:path]}"
       - if o[:nb_pictures] > 0
-        = " (#{o[:nb_pictures]})"
+        %span.count= o[:nb_pictures]
       = display_menu o[:path]

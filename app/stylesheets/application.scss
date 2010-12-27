@@ -14,8 +14,32 @@ div#menu {
   overflow-x:hidden;
   margin: 0;
   padding: 5px;
+  top: 0px;
   background: black;
   border-right: solid white 1px;
+  font-size: 14pt;
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    list-style: none;
+    span.count {
+      float: right;
+      margin-right: 5px;
+      font-size: 12pt;
+    }
+  }
+  
+  a:link, a:visited {
+    text-decoration: none;
+    font-style: none;
+    color: white;
+  }
+  
+  a:hover, a:active {
+    text-decoration: underline;
+  }
 }
 
 div#main {
@@ -23,6 +47,20 @@ div#main {
   margin-left: 265px;
 }
 
-img.thumb {
-  width: 180px;
+ul.image_list {
+  list-style: none;
+}
+
+.image_list li {
+  display:inline-block;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+}
+
+.thumb img {
+  border: 1px solid white;
+  -moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.9);
+  align: center;
 }
