@@ -10,7 +10,7 @@ Thumbnails are generated on-the-fly when the album is seen for the first time, a
 == Install ==
 To install Picty, you need Ruby (tested with 1.8.7 and 1.9.2) and the bundler gem.
 
-Picty is a standard Rack application. You only need to download (or clone) Picty from GitHub (http://github.com/renchap/Picty), run "bundle install" in the Picty directory to install dependancies, and then configure your webserver to run the application.
+Picty is a standard Rack application. You only need to download (or clone) Picty from GitHub (http://github.com/renchap/Picty), run "bundle install --deployment" in the Picty directory to install dependancies (will be installed in vendor/bundle/, without changing your local gems), and then configure your webserver to run the application.
 
 For exemple, if you use passenger, you only need to point your document root to Picty's public/ directory in your Picty Virtualhost, and restart your web server.
 
