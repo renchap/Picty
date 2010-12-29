@@ -1,0 +1,26 @@
+Picty is a small Ruby/Rack application to display your pictures online.
+
+Website: http://github.com/renchap/Picty
+IRC Channel: #picty @ Freenode
+
+All directories in public/pictures are your albums, put your pictures in it and that is all. You can also create sub-directories to organize your albums better.
+
+Thumbnails are generated on-the-fly when the album is seen for the first time, and stored in public/thumbs.
+
+== Install ==
+To install Picty, you need Ruby (tested with 1.8.7 and 1.9.2) and the bundler gem.
+
+Picty is a standard Rack application. You only need to download (or clone) Picty from GitHub (http://github.com/renchap/Picty), run "bundle install" in the Picty directory to install dependancies, and then configure your webserver to run the application.
+
+For exemple, if you use passenger, you only need to point your document root to Picty's public/ directory in your Picty Virtualhost, and restart your web server.
+
+== Contributing ==
+Feel free to send bug reports on GitHub (https://github.com/renchap/Picty/issues). Please include any useful error message or logs (usualy found in log/production.log), and the version of Picty you are running. An URL with the problem is even better !
+
+To send patches, please clone the Git repository on GitHub (http://github.com/renchap/Picty) and send pull requests. If you want to submit a significant patch (new feature, big modifications, ...), please try to talk about it on the IRC channel before, or in an issue.
+
+== Credits ==
+- Renaud Chaput
+
+== Licence ==
+This software is licenced under MIT Licence (see LICENCE)
