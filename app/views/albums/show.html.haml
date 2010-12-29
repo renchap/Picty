@@ -1,4 +1,4 @@
 %ul.image_list
   - @pictures.each do |picture|
     %li.thumb
-      = image_tag picture.thumbnail.url
+      = link_to(image_tag(picture.thumbnail.url), url_for(:pictures, :show, :path => picture))

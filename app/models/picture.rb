@@ -20,7 +20,15 @@ class Picture
   def url
     "/pictures#{self.path}"
   end
-  
+
+  def to_param
+    self.path[1..-1].gsub(/\.jpg/i,'')
+  end
+
+  def self.from_param(param)
+    Picture.new(param+'.jpg')
+  end
+
   def thumbnail
     @thumbnail = Thumbnail.new(self) unless @thumbnail
     @thumbnail
