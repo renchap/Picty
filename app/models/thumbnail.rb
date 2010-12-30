@@ -4,6 +4,18 @@ class Thumbnail
     @picture = picture
   end
   
+  def to_param
+    @picture.to_param
+  end
+
+  def self.from_param param
+    begin
+      Picture.new('/'+param.join('/')).thumbnail
+    rescue Picture::NotFound => e
+      nil
+    end
+  end
+
   def physical_path
     "#{PADRINO_ROOT}/public/thumbs#{@picture.path}"
   end

@@ -2,6 +2,9 @@ class Directory
   attr_reader :path, :name
   @@directories = Hash.new
   
+ class NotFound < Exception
+ end
+
   def self.get_directory(path)
     path.gsub!(/\/+/,'/')
     dir = @@directories[path]
@@ -17,6 +20,7 @@ class Directory
     path.gsub!(/\/+/,'/')
     @path = path
     @name = path.split('/').pop
+    raise Directory::NotFound.new("Directory #{path} does not exists") unless File.directory?(self.physical_path)
   end
   
   def physical_path
