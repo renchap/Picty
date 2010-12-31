@@ -1,7 +1,0 @@
-%ul
-  - submenu.each do |o|
-    %li{:id => 'submenu_'+o[:path]}
-      = link_to o[:name], "/albums#{o[:path]}"
-      - if o[:nb_pictures] > 0
-        %span.count= o[:nb_pictures]
-      = display_menu o[:path]

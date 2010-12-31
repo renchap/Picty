@@ -1,0 +1,7 @@
+%ul
+  - children.each do |album|
+    %li{:id => 'submenu_'+album.path}
+      = link_to album.name, url_for(:albums, :show, :album => album)
+      - if album.number_of_pictures > 0
+        %span.count= album.number_of_pictures
+      = display_menu album.path

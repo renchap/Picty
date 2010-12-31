@@ -5,5 +5,4 @@ Picty.controllers :pictures do
     render 'pictures/show'
   end
 
-
 end

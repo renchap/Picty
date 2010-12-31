@@ -2,14 +2,14 @@
 
 Picty.helpers do
   def display_menu path = '/'
-    dir = Array.new
+    children = Array.new
     Directory.get_directory(path).children.each do |child|
-      dir << { :name => child.name, :path => child.path, :nb_pictures => child.number_of_pictures }
+      children << child
     end
-    if dir.length == 0 and path == '/'
+    if children.length == 0 and path == '/'
       render :haml, '%p No Albums', :layout => false
     else
-      partial 'menu/submenu', :object => dir
+      partial 'menu/children', :object => children
     end
   end
 end
