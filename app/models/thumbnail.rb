@@ -27,6 +27,7 @@ class Thumbnail
   def create!
     image = MiniMagick::Image.open(@picture.physical_path)
     image.resize('200x200')
+    
     # Create the directories if needed
     directory = self.physical_path.split('/')
     directory.pop
@@ -37,5 +38,6 @@ class Thumbnail
     end
     logger.info "Created thumbnail #{self.physical_path}"
     image.write(self.physical_path)
+    image.destroy!
   end
 end
