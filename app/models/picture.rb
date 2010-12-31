@@ -27,7 +27,11 @@ class Picture
   end
 
   def self.from_param(param)
-    Picture.new(param+'.jpg')
+    begin
+      Picture.new(param+'.jpg')
+    rescue Picture::NotFound => e
+      nil
+    end
   end
 
   def path
