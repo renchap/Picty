@@ -8,7 +8,7 @@ All directories in public/pictures are your albums, put your pictures in it and 
 Thumbnails are generated on-the-fly when the album is seen for the first time, and stored in public/thumbs.
 
 == Install ==
-To install Picty, you need Ruby (tested with 1.8.7 and 1.9.2) and the bundler gem.
+To install Picty, you need Ruby (tested with 1.8.7 and 1.9.2) and the bundler gem. You also need ImageMagick or GraphicsMagick (to create thumbnails).
 
 Picty is a standard Rack application. You only need to download (or clone) Picty from GitHub (http://github.com/renchap/Picty), run "bundle install --deployment" in the Picty directory to install dependancies (will be installed in vendor/bundle/, without changing your local gems), and then configure your webserver to run the application.
 
