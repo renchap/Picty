@@ -39,7 +39,7 @@ class Picture
   end
   
   def physical_path
-    "#{PADRINO_ROOT}/public/pictures#{self.path}"
+    Padrino.root("public/pictures#{self.path}")
   end
   
   def url

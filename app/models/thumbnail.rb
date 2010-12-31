@@ -17,7 +17,7 @@ class Thumbnail
   end
 
   def physical_path
-    "#{PADRINO_ROOT}/public/thumbs#{@picture.path}"
+    Padrino.root("public/thumbs#{@picture.path}")
   end
   
   def url
