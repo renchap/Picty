@@ -17,7 +17,6 @@ div#menu {
   top: 0px;
   background: black;
   border-right: solid white 1px;
-  font-size: 14pt;
   
   ul {
     list-style-type: none;
@@ -25,22 +24,38 @@ div#menu {
   
   li {
     list-style: none;
+    font-size: 14pt;
+
     span.count {
       float: right;
       margin-right: 5px;
       font-size: 12pt;
     }
-  }
+    
+    a:link, a:visited {
+      text-decoration: none;
+      font-style: none;
+      color: white;
+    }
   
-  a:link, a:visited {
-    text-decoration: none;
-    font-style: none;
-    color: white;
+    a:hover, a:active {
+      text-decoration: underline;
+    }
   }
-  
-  a:hover, a:active {
-    text-decoration: underline;
+
+  div#powered_by {
+    position: absolute;
+    bottom: 0px;
+    font-size: 1em;
+    height: 2em;
+    margin-bottom: 5px;
+
+    a:link, a:visited, a:hover, a:active {
+      text-decoration: underline;
+      color: white;
+    }
   }
+
 }
 
 div#main {

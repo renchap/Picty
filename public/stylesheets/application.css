@@ -15,22 +15,31 @@ div#menu {
   padding: 5px;
   top: 0px;
   background: black;
-  border-right: solid white 1px;
-  font-size: 14pt; }
+  border-right: solid white 1px; }
   div#menu ul {
     list-style-type: none; }
   div#menu li {
-    list-style: none; }
+    list-style: none;
+    font-size: 14pt; }
     div#menu li span.count {
       float: right;
       margin-right: 5px;
       font-size: 12pt; }
-  div#menu a:link, div#menu a:visited {
-    text-decoration: none;
-    font-style: none;
-    color: white; }
-  div#menu a:hover, div#menu a:active {
-    text-decoration: underline; }
+    div#menu li a:link, div#menu li a:visited {
+      text-decoration: none;
+      font-style: none;
+      color: white; }
+    div#menu li a:hover, div#menu li a:active {
+      text-decoration: underline; }
+  div#menu div#powered_by {
+    position: absolute;
+    bottom: 0px;
+    font-size: 1em;
+    height: 2em;
+    margin-bottom: 5px; }
+    div#menu div#powered_by a:link, div#menu div#powered_by a:visited, div#menu div#powered_by a:hover, div#menu div#powered_by a:active {
+      text-decoration: underline;
+      color: white; }
 
 div#main {
   display: block;
