@@ -16,6 +16,10 @@ div#menu {
   top: 0px;
   background: black;
   border-right: solid white 1px; }
+  div#menu .home {
+    font-size: 14pt;
+    margin-left: 20px;
+    margin-top: 20px; }
   div#menu ul {
     list-style-type: none; }
   div#menu li {
@@ -25,12 +29,11 @@ div#menu {
       float: right;
       margin-right: 5px;
       font-size: 12pt; }
-    div#menu li a:link, div#menu li a:visited {
-      text-decoration: none;
-      font-style: none;
-      color: white; }
-    div#menu li a:hover, div#menu li a:active {
-      text-decoration: underline; }
+  div#menu a:link, div#menu a:visited {
+    text-decoration: none;
+    color: white; }
+  div#menu a:hover, div#menu a:active {
+    text-decoration: underline; }
   div#menu div#powered_by {
     position: absolute;
     bottom: 0px;
