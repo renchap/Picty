@@ -68,7 +68,7 @@ class Picture
   end
   
   def url
-    "/pictures#{self.path}"
+    "/pictures#{self.path}".gsub(' ','%20')
   end
 
   def get_metadata(name)
