@@ -18,6 +18,8 @@ Picty.controllers :albums do
     @path = directory.path
     # Convert the path to UTF-8 if Ruby 1.9
     @path.force_encoding('utf-8') if @path.respond_to?(:force_encoding)
+    
+    @page_title = directory.path[1..-1]
     render 'albums/show'
   end
 
