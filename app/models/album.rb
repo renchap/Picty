@@ -1,18 +1,18 @@
-class Directory
+class Album
   attr_reader :path, :name
-  @@directories = Hash.new
+  @@albums = Hash.new
   
   class NotFound < Exception
   end
 
-  def self.get_directory(path)
+  def self.get_album(path)
     path.gsub!(/\/+/,'/')
-    dir = @@directories[path]
-    unless dir
-      dir = Directory.new(path)
-      @@directories[path] = dir
+    album = @@albums[path]
+    unless album
+      album = Album.new(path)
+      @@albums[path] = album
     end 
-    dir
+    album
   end
   
   def initialize(path)
@@ -20,7 +20,7 @@ class Directory
     path.gsub!(/\/+/,'/')
     @path = path
     @name = path.split('/').pop
-    raise Directory::NotFound.new("Directory #{path} does not exists") unless File.directory?(self.physical_path)
+    raise Album::NotFound.new("Directory #{path} does not exists") unless File.directory?(self.physical_path)
   end
   
   def to_param
@@ -29,8 +29,8 @@ class Directory
   
   def self.from_param param
     begin
-      Directory.get_directory('/'+param.join('/'))
-    rescue Directory::NotFound => e
+      Album.get_album('/'+param.join('/'))
+    rescue Album::NotFound => e
       nil
     end
   end
@@ -44,7 +44,7 @@ class Directory
       next true if entry =~ /^\./
       not File.directory?(self.physical_path+'/'+entry)
     end.map do |subdir|
-      Directory.get_directory("#{self.path}/#{subdir}")
+      Album.get_album("#{self.path}/#{subdir}")
     end
   end
   
@@ -52,7 +52,7 @@ class Directory
     return nil if @path == '/'
     a = self.path.split('/')
     a.pop
-    Directory.get_directory '/'+a.join('/')
+    Album.get_album '/'+a.join('/')
   end
   
   def pictures

@@ -3,10 +3,10 @@ require 'natural_sort_kernel'
 Picty.controllers :albums do
 
   get :show, :map => '/albums/*album' do
-    directory = Directory.from_param(params[:album])
-    halt(404, "Picture does not exists") unless directory
+    album = Album.from_param(params[:album])
+    halt(404, "Album does not exists") unless album
     
-    @pictures = directory.pictures.sort do |x,y|
+    @pictures = album.pictures.sort do |x,y|
       a = [x.filename,y.filename]
       a_sorted = a.natural_sort
       if a_sorted == a
@@ -15,11 +15,11 @@ Picty.controllers :albums do
         1
       end
     end
-    @path = directory.path
+    @path = album.path
     # Convert the path to UTF-8 if Ruby 1.9
     @path.force_encoding('utf-8') if @path.respond_to?(:force_encoding)
     
-    @page_title = directory.path[1..-1]
+    @page_title = album.path[1..-1]
     render 'albums/show'
   end
 

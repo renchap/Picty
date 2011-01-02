@@ -1,5 +1,5 @@
 class Picture
-  attr_reader :filename, :directory
+  attr_reader :filename, :album
   
   EXIF_METADATA = {
     :camera_model => 'model',
@@ -35,10 +35,10 @@ class Picture
     @metadata = nil
 
     begin
-      @directory = Directory.get_directory("/#{ar.join('/')}")
-    rescue Directory::NotFound => e
-      # Picture not found if directory is not found
-      raise Picture::NotFound, "Directory for picture #{path} not found"
+      @album = Album.get_album("/#{ar.join('/')}")
+    rescue Album::NotFound => e
+      # Picture not found if album is not found
+      raise Picture::NotFound, "Album not found for picture #{path}"
     end
     
     # Picture not found if the picture does not exists on disk
@@ -60,7 +60,7 @@ class Picture
   end
 
   def path
-    self.directory.path+'/'+self.filename
+    self.album.path+'/'+self.filename
   end
   
   def physical_path
