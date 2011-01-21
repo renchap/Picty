@@ -16,4 +16,4 @@ gem 'haml'
 
 
 # Padrino
-gem 'padrino', "0.9.19"
+gem 'padrino', "0.9.20"

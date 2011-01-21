@@ -21,7 +21,7 @@ class Thumbnail
   end
   
   def url
-    "/thumbs#{@picture.path}".gsub(' ','%20')
+    "/thumbs#{@picture.path}"
   end
   
   def create!
