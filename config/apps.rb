@@ -21,5 +21,12 @@
 #   Padrino.mount(:app_file => "path/to/file", :app_class => "Blog").to('/')
 #
 
+Padrino.configure_apps do
+  enable :sessions
+  # $ padrino rake gen
+  # $ rake secret
+  set :session_secret, "a9e2fe4220e797d9f826ec46997288d68ca7cef3b7535dbe064aa3f76db24190" 
+end
+
 # Mounts the core application for this project
 Padrino.mount("Picty").to('/')
